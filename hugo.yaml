@@ -1,0 +1,141 @@
+baseURL: "https://telixirx.github.io/"
+title: telixirx
+theme: PaperMod
+
+enableRobotsTXT: true
+enableEmoji: true
+hasCJKLanguage: true
+
+pagination:
+  pagerSize: 10
+
+defaultContentLanguage: zh
+defaultContentLanguageInSubdir: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+languages:
+  zh:
+    label: 中文
+    weight: 1
+    title: telixirx
+    params:
+      languageAltTitle: Chinese
+      profileMode:
+        enabled: true
+        title: Tianlan
+        subtitle: Programming is an art form.
+        imageUrl: "/images/avatar.svg"
+        imageTitle: Tianlan
+        imageWidth: 120
+        imageHeight: 120
+        buttons:
+          - name: 关于
+            url: "about/"
+          - name: 博客
+            url: "posts/"
+      socialIcons:
+        - name: github
+          url: "https://github.com/telixirx"
+    menu:
+      main:
+        - identifier: about
+          name: 关于
+          url: /about/
+          weight: 10
+        - identifier: posts
+          name: 博客
+          url: /posts/
+          weight: 20
+        - identifier: search
+          name: 搜索
+          url: /search/
+          weight: 30
+
+  en:
+    label: English
+    weight: 2
+    title: telixirx
+    params:
+      languageAltTitle: English
+      profileMode:
+        enabled: true
+        title: Tianlan
+        subtitle: Programming is an art form.
+        imageUrl: "/images/avatar.svg"
+        imageTitle: Tianlan
+        imageWidth: 120
+        imageHeight: 120
+        buttons:
+          - name: About
+            url: "about/"
+          - name: Posts
+            url: "posts/"
+      socialIcons:
+        - name: github
+          url: "https://github.com/telixirx"
+    menu:
+      main:
+        - identifier: about
+          name: About
+          url: /about/
+          weight: 10
+        - identifier: posts
+          name: Posts
+          url: /posts/
+          weight: 20
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 30
+
+params:
+  env: production
+  author: Tianlan
+  description: "A digital realm of algorithms, literature, and life."
+  defaultTheme: auto
+  ShowBreadCrumbs: false
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowCodeCopyButtons: true
+  ShowRelatedPosts: false
+  ShowWordCount: false
+  ShowToc: true
+  TocOpen: false
+  comments: false
+  DateFormat: "2006-01-02"
+  label:
+    text: telixirx
+  assets:
+    favicon: "/images/favicon.svg"
+    favicon16x16: "/images/favicon.svg"
+    favicon32x32: "/images/favicon.svg"
+    apple_touch_icon: "/images/favicon.svg"
+  cover:
+    hidden: true
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    lineNos: false
+    guessSyntax: true

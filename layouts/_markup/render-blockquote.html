@@ -1,0 +1,12 @@
+{{- if eq .Type "alert" -}}
+  {{- partial "alert.html" (dict
+    "type" .AlertType
+    "title" .AlertTitle
+    "sign" .AlertSign
+    "text" .Text
+  ) -}}
+{{- else -}}
+<blockquote>
+  {{ .Text }}
+</blockquote>
+{{- end -}}

@@ -1,0 +1,10 @@
+.hint {
+  display: inline;
+  margin: 0;
+  color: color-mix(in srgb, var(--secondary) 20%, transparent);
+  transition: color 0.2s ease;
+}
+
+.hint:hover {
+  color: var(--primary);
+}

@@ -1,0 +1,26 @@
+- id: updated
+  translation: "Updated"
+
+- id: note
+  translation: "Note"
+
+- id: info
+  translation: "Info"
+
+- id: tip
+  translation: "Tip"
+
+- id: important
+  translation: "Important"
+
+- id: warning
+  translation: "Warning"
+
+- id: caution
+  translation: "Caution"
+
+- id: success
+  translation: "Success"
+
+- id: danger
+  translation: "Danger"

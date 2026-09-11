@@ -1,0 +1,10 @@
+.ghost {
+  display: inline;
+  margin: 0;
+  color: color-mix(in srgb, var(--secondary) 0%, transparent);
+  transition: color 0.2s ease;
+}
+
+.ghost:hover {
+  color: var(--primary);
+}

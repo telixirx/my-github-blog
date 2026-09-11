@@ -1,0 +1,23 @@
+{{- $type := "note" -}}
+{{- $title := "" -}}
+{{- $fold := "" -}}
+{{- if .IsNamedParams -}}
+  {{- with .Get "type" }}{{ $type = . }}{{ end -}}
+  {{- $title = .Get "title" -}}
+  {{- $fold = .Get "fold" -}}
+{{- else -}}
+  {{- with .Get 0 }}{{ $type = . }}{{ end -}}
+{{- end -}}
+{{- $type = $type | lower -}}
+{{- $sign := "" -}}
+{{- if eq $fold "closed" -}}
+  {{- $sign = "-" -}}
+{{- else if eq $fold "open" -}}
+  {{- $sign = "+" -}}
+{{- end -}}
+{{- partial "alert.html" (dict
+  "type" $type
+  "title" $title
+  "sign" $sign
+  "text" (.Inner | .Page.RenderString)
+) -}}

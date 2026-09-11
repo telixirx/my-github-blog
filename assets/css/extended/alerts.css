@@ -1,0 +1,85 @@
+.md-alert {
+    --alert-accent: var(--secondary);
+    margin: 1.25rem 0;
+    padding: 0.85rem 1rem 0.95rem;
+    border: 1px solid var(--border);
+    border-inline-start: 0.28rem solid var(--alert-accent);
+    border-radius: var(--radius);
+    background: color-mix(in srgb, var(--alert-accent) 8%, var(--code-bg));
+}
+
+.md-alert-title {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.45rem;
+    font-size: 0.92em;
+    font-weight: 650;
+    letter-spacing: 0.02em;
+    color: var(--alert-accent);
+}
+
+.md-alert-body > *:first-child {
+    margin-top: 0;
+}
+
+.md-alert-body > *:last-child {
+    margin-bottom: 0;
+}
+
+.md-alert details,
+details.md-alert {
+    padding: 0.85rem 1rem 0.95rem;
+}
+
+details.md-alert {
+    display: block;
+}
+
+details.md-alert > summary.md-alert-title {
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+details.md-alert[open] > summary.md-alert-title {
+    margin-bottom: 0.45rem;
+}
+
+details.md-alert > summary.md-alert-title::-webkit-details-marker {
+    display: none;
+}
+
+.md-alert--note,
+.md-alert--info,
+.md-alert--abstract,
+.md-alert--todo {
+    --alert-accent: #3b6fd4;
+}
+
+.md-alert--tip,
+.md-alert--success,
+.md-alert--example {
+    --alert-accent: #2f9e62;
+}
+
+.md-alert--important,
+.md-alert--question {
+    --alert-accent: #7c5cbf;
+}
+
+.md-alert--warning {
+    --alert-accent: #c48a1a;
+}
+
+.md-alert--caution,
+.md-alert--danger,
+.md-alert--error,
+.md-alert--failure,
+.md-alert--bug {
+    --alert-accent: #c44c4c;
+}
+
+[data-theme="dark"] .md-alert {
+    background: color-mix(in srgb, var(--alert-accent) 14%, var(--entry));
+}

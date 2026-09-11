@@ -1,0 +1,18 @@
+{{- $type := .type | default "note" | lower -}}
+{{- $title := .title -}}
+{{- $sign := .sign -}}
+{{- $text := .text -}}
+{{- $label := or $title (i18n $type) (title $type) -}}
+{{- $class := printf "md-alert md-alert--%s" $type -}}
+
+{{- if $sign -}}
+<details class="{{ $class }}" {{- if ne $sign "-" }} open{{ end }}>
+  <summary class="md-alert-title">{{ $label }}</summary>
+  <div class="md-alert-body">{{ $text }}</div>
+</details>
+{{- else -}}
+<aside class="{{ $class }}">
+  <p class="md-alert-title">{{ $label }}</p>
+  <div class="md-alert-body">{{ $text }}</div>
+</aside>
+{{- end -}}

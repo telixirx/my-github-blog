@@ -1,10 +1,17 @@
 baseURL: "https://telixirx.github.io/"
-title: telixirx
+title: telixirx's blog
 theme: PaperMod
 
 enableRobotsTXT: true
 enableEmoji: true
+enableGitInfo: true
 hasCJKLanguage: true
+
+frontmatter:
+  lastmod:
+    - lastmod
+    - :git
+    - date
 
 pagination:
   pagerSize: 10
@@ -22,15 +29,15 @@ languages:
   zh:
     label: 中文
     weight: 1
-    title: telixirx
+    title: telixirx's blog
     params:
       languageAltTitle: Chinese
       profileMode:
         enabled: true
-        title: Tianlan
+        title: telixirx
         subtitle: Programming is an art form.
-        imageUrl: "/images/avatar.svg"
-        imageTitle: Tianlan
+        imageUrl: "/images/avatar.jpg"
+        imageTitle: telixirx
         imageWidth: 120
         imageHeight: 120
         buttons:
@@ -59,15 +66,15 @@ languages:
   en:
     label: English
     weight: 2
-    title: telixirx
+    title: telixirx's blog
     params:
       languageAltTitle: English
       profileMode:
         enabled: true
-        title: Tianlan
+        title: telixirx
         subtitle: Programming is an art form.
-        imageUrl: "/images/avatar.svg"
-        imageTitle: Tianlan
+        imageUrl: "/images/avatar.jpg"
+        imageTitle: telixirx
         imageWidth: 120
         imageHeight: 120
         buttons:
@@ -95,20 +102,21 @@ languages:
 
 params:
   env: production
-  author: Tianlan
+  author: Tianlan Xu
   description: "A digital realm of algorithms, literature, and life."
   defaultTheme: auto
   ShowBreadCrumbs: false
-  ShowReadingTime: false
+  ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: false
   ShowCodeCopyButtons: true
   ShowRelatedPosts: false
-  ShowWordCount: false
+  ShowWordCount: true
   ShowToc: true
   TocOpen: false
   comments: false
   DateFormat: "2006-01-02"
+  ShowLastMod: true
   label:
     text: telixirx
   assets:

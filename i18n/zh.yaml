@@ -1,0 +1,29 @@
+- id: translations
+  translation: "翻译"
+
+- id: updated
+  translation: "更新于"
+
+- id: note
+  translation: "注意"
+
+- id: info
+  translation: "说明"
+
+- id: tip
+  translation: "提示"
+
+- id: important
+  translation: "重要"
+
+- id: warning
+  translation: "警告"
+
+- id: caution
+  translation: "小心"
+
+- id: success
+  translation: "完成"
+
+- id: danger
+  translation: "危险"
